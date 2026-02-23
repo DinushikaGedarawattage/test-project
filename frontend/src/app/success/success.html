@@ -1,0 +1,17 @@
+<div class="background">
+
+  <div class="top-section">
+    <h1>Hello, {{ userName }}! 👋</h1>
+    <p>Welcome back! You are logged in as {{ userEmail }}</p>
+
+
+    <button (click)="toggleUserList()">
+      {{ showUsers ? 'Hide User List' : 'Show User List' }}
+    </button>
+  </div>
+
+  <div [hidden]="!showUsers">
+    <app-user-list></app-user-list>
+  </div>
+
+</div>

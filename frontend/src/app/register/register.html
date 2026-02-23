@@ -1,0 +1,41 @@
+<div class="background">
+  <!-- Floating bubbles -->
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+
+  <div class="card">
+    <button class="back-btn" (click)="goBack()">← Back</button>
+    <h1>Create Account</h1>
+    <p>Fill in your details to register</p>
+
+    <form (ngSubmit)="onSubmit()">
+
+      <label>First Name</label>
+      <input type="text" [(ngModel)]="user.first_name" name="first_name" required placeholder="Enter first name">
+
+      <label>Last Name</label>
+      <input type="text" [(ngModel)]="user.last_name" name="last_name" required placeholder="Enter last name">
+
+      <label>Email</label>
+      <input type="email" [(ngModel)]="user.email" name="email" required placeholder="Enter your email">
+
+      <label>City</label>
+      <input type="text" [(ngModel)]="user.city" name="city" required placeholder="Enter your city">
+
+      <button type="submit" class="register-btn">
+        Save & Register
+      </button>
+
+    </form>
+
+    <div class="login-link">
+      Already have an account?
+      <a (click)="goToLogin()">Login</a>
+    </div>
+
+  </div>
+
+</div>

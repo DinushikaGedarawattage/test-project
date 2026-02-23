@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: learning-project
+  datasource:
+    url: jdbc:mariadb://localhost:3306/learing_project_db
+    username: root
+    password: Dinu123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
